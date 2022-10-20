@@ -16,5 +16,11 @@ setTimeout(() => {
         }, 500);
     }, 1000);
 }, 1000);
-We can not access any variable's value from asynchronus function. If we need this value we will use call back function inside the call back function. And this will create callback hell. For this reason we use Promises.
+// We can not access any variable's value from asynchronus function. If we need this value we will use call back function inside the asynchronus function. And this will create callback hell. For this reason we use Promises.
 console.log("Hope You Are Well");
+
+/* 
+=================
+    
+=================
+*/
