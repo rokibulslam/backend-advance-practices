@@ -30,8 +30,11 @@ for (let i = 0; i < userIds.length; i++) {
 //   const userId = userIds[i];
   userData.push(myPromise)
 }
-Promise.all(userData).then(res=> console.log(res))
+/*
+==> For loop is a syncronus action.If for loop consist of asynchronus action loop returns an empty array/obj. Here Promise.all method return the loop result after finish of for loop.
+*/
+Promise.all(userData).then(res=> console.log(res)).catch(err => console.log(err))
 // consume/get data from promise 
-myPromise
-    .then(res => console.log(res))
-    .catch(err => console.log("found in catch", err))
+// myPromise
+//     .then(res => console.log(res))
+//     .catch(err => console.log("found in catch", err))
