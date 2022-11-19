@@ -2,6 +2,8 @@
 ==> for error handling in async-await we need to use try-catch;
 ==> Benifit of error handling=> code will not break on run time.
 */
+// const errorHandler = require("./errorHandler.js");  //default import
+const {errorHandler, two} = require("./errorHandler.js");
 async function getData() {
     try {
         // undefined.find();
@@ -14,6 +16,7 @@ async function getData() {
 }
 getData();
 
+
 /*
 ------------------Global Error Handler----------------------
 ==> Error has some property such as name, message, stack.
@@ -25,3 +28,4 @@ function errorHandle(error) {
     console.log(name, message);
 }
 console.log("done")
+console.log(two());
