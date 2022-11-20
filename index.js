@@ -1,6 +1,8 @@
 const http = require('http');
+const url = require('url');
 
 const server = http.createServer(function (req, res) {
+    // Simple route
     // console.log(req.url)
     if (req.url == '/') {
         res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -17,6 +19,11 @@ const server = http.createServer(function (req, res) {
         res.write("<H1>This is About-Us Page</H1>");
         res.end();
     }
+    // Query parsing from url
+    const adress_url = 'http://localhost:5000/contact?name=shetu&country=bangladesh';
+    const parse_url = url.parse(adress_url, true);
+    const queryObj = parse_url.query;
+    console.log(queryObj);
 });
 
 const PORT = 5000;
