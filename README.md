@@ -55,5 +55,5 @@ or
 ```
 npm init --y
 ```
-### JSON Best Practices
+
 
