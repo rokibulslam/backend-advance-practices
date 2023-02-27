@@ -1,6 +1,6 @@
 const express = require('express');
-const HelloControler=require("../controllers/HelloController")
 const router = express.Router();
+const HelloControler = require("../controllers/HelloController")
 const studentController=require("../controllers/studentsControllers")
 
 // express core
